@@ -19,7 +19,7 @@ print()
 # 資料前處理
 # 處理缺失值
 df_train['Age'].fillna(df_train['Age'].median(), inplace=True) # 以中位數填補Age欄位
-df_train['Embarked'].fillna(df_train['Embarked'].mode()[0], inplace=True) # 田補Embarked欄位
+df_train['Embarked'].fillna(df_train['Embarked'].mode()[0], inplace=True) # 填補Embarked欄位
 df_train.drop(columns=['Cabin'], inplace=True) # 移除Cabin欄位(缺失值太多)
 
 # 類別標籤轉換(轉成數值，方便模型訓練)
